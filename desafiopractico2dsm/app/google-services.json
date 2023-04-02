@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "712223426936",
+    "project_id": "desafiopractico2-b91fe",
+    "storage_bucket": "desafiopractico2-b91fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712223426936:android:29e9276711ea1136b2a08d",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.desafiopractico2dsm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712223426936-rm2grvvq2b8rkckhk0s90kan7951g2op.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_g2k4EpdJ3NGOeTr3QyyiNiqJUC9mNps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712223426936-rm2grvvq2b8rkckhk0s90kan7951g2op.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
