@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler().postDelayed({
-            val intent = Intent(this@MainActivity, Medicamentos::class.java)
+            val intent = Intent(this@MainActivity, AuthenticationActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
