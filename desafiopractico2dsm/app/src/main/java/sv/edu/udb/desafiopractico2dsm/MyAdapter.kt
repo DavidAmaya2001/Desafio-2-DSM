@@ -1,13 +1,15 @@
 package sv.edu.udb.desafiopractico2dsm
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class MyAdapter(private val medicsList : ArrayList<Medicina>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private val medicsList : ArrayList<Medicina>, private val context: Context) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
@@ -34,6 +36,6 @@ class MyAdapter(private val medicsList : ArrayList<Medicina>) : RecyclerView.Ada
         holder.Precio.text = "$" + currentitem.Precio.toString()
         holder.Indicaciones.text = currentitem.Indicaciones
         holder.Contraindicaciones.text = currentitem.Contraindicaciones
-        
+        Glide.with(context).load(medicsList[position].img).into(holder.img)
     }
 }

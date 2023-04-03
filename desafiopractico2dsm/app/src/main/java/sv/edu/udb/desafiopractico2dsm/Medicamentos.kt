@@ -35,7 +35,7 @@ class Medicamentos : AppCompatActivity() {
                         val takeMedicine = medicineSnapshot.getValue(Medicina::class.java)
                         medicArrayList.add(takeMedicine!!)
                     }
-                    medicRecyclerView.adapter = MyAdapter(medicArrayList)
+                    medicRecyclerView.adapter = MyAdapter(medicArrayList, this@Medicamentos)
                 }
             }
 
