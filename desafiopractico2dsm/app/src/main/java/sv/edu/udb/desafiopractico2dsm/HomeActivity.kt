@@ -45,7 +45,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         orderShow.setOnClickListener{
-            val moviendoseOrden = Intent(this,Compras::class.java)
+            val moviendoseOrden = Intent(this,ComprasActivity::class.java)
             startActivity(moviendoseOrden)
         }
 

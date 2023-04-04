@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class MyAdapter(private val medicsList : ArrayList<Medicina>, private val context: Context) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
-
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val Nombre : TextView = itemView.findViewById(R.id.medicName)
@@ -18,6 +18,7 @@ class MyAdapter(private val medicsList : ArrayList<Medicina>, private val contex
         val Indicaciones : TextView = itemView.findViewById(R.id.medicIndic)
         val Contraindicaciones : TextView = itemView.findViewById(R.id.medicContra)
         val img : ImageView = itemView.findViewById(R.id.medicImg)
+        val Agregar : Button = itemView.findViewById(R.id.btnAgregar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -38,4 +39,5 @@ class MyAdapter(private val medicsList : ArrayList<Medicina>, private val contex
         holder.Contraindicaciones.text = currentitem.Contraindicaciones
         Glide.with(context).load(medicsList[position].img).into(holder.img)
     }
+
 }

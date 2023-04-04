@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 
@@ -12,6 +13,8 @@ lateinit var email : EditText
 lateinit var password : EditText
 lateinit var registrar : Button
 lateinit var login : Button
+lateinit var labelemail : TextView
+lateinit var labelpass : TextView
 
 class AuthenticationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +25,8 @@ class AuthenticationActivity : AppCompatActivity() {
         password = findViewById(R.id.txtPassword)
         registrar = findViewById(R.id.btnSingUp)
         login = findViewById(R.id.btnLogin)
+        labelemail = findViewById(R.id.lblCorreoVacio)
+        labelpass = findViewById(R.id.lblPasswordVacia)
 
         configs()
     }
@@ -40,6 +45,18 @@ class AuthenticationActivity : AppCompatActivity() {
                     }
                 }
             }
+            else{
+                if(email.text.isEmpty()){
+                    labelemail.text =  "Campo de Correo no puede estar vacio"
+                }
+                else if(password.text.isEmpty()){
+                    labelpass.text = "Campo de Contraseña no puede estar vacio"
+                }
+                else{
+                    labelemail.text = ""
+                    labelpass.text = ""
+                }
+            }
         }
 
         login.setOnClickListener{
@@ -51,6 +68,18 @@ class AuthenticationActivity : AppCompatActivity() {
                     else{
                         mostrarAlerta()
                     }
+                }
+            }
+            else{
+                if(email.text.isEmpty()){
+                    labelemail.text =  "Campo de Correo no puede estar vacio"
+                }
+                else if(password.text.isEmpty()){
+                    labelpass.text = "Campo de Contraseña no puede estar vacio"
+                }
+                else{
+                    labelemail.text = ""
+                    labelpass.text = ""
                 }
             }
         }
