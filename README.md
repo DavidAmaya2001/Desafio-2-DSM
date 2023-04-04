@@ -2,5 +2,5 @@
 
 Integrantes:
 
--David Elias Amaya Ramirez
+- David Elias Amaya Ramirez
 - Mauricio Alejandro Martinez Nerio
